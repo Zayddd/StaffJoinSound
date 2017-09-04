@@ -1,0 +1,7 @@
+name: StaffJoinSound
+version: 1.0
+main: me.meeran.staffjoinsound.Core
+author: Miran Manuchehri (Meeran)
+website: https://www.twitter.com/wabmiran
+commands:
+   staffsound:
