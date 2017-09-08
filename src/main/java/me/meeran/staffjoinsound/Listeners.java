@@ -9,11 +9,12 @@ import org.bukkit.event.player.PlayerJoinEvent;
 public class Listeners implements Listener {
 
     @EventHandler
-    public void onJoin(PlayerJoinEvent e){
+    public void onJoin(PlayerJoinEvent e) 
+    {
         Player p = e.getPlayer();
 
-        if (p.hasPermission(""))
+        if (p.hasPermission("staffsound.join"))
+            
         p.playSound(p.getLocation(), Sound.WITHER_DEATH, 1, 1);
-
     }
 }
