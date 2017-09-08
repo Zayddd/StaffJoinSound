@@ -22,22 +22,18 @@ import org.bukkit.inventory.meta.SkullMeta;
 public  class StaffSoundCommand implements CommandExecutor {
 
 
-    private Inventory gui = Bukkit.createInventory(null, 9, (ChatColor.DARK_RED + "StaffSound"));
-
+    private Inventory gui = Bukkit.createInventory(null, 9, (ChatColor.DARK_RED + "Staff Sound Module"));
 
     public void openGUI(Player p){
         gui.setItem(0, new ItemStack(Material.GRASS));
         ItemStack grass = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
         SkullMeta skullMeta = (SkullMeta) grass.getItemMeta();
-        skullMeta.setDisplayName(ChatColor.GRAY + "Player: " + ChatColor.YELLOW + p.getName());
+        skullMeta.setDisplayName(ChatColor.YELLOW + "Player: " + ChatColor.GRAY + p.getName());
         skullMeta.setOwner(p.getName());
         grass.setItemMeta(skullMeta);
         gui.setItem(1, grass);
         p.openInventory(gui);
     }
-
-
-
 
 
     @Override
@@ -50,7 +46,8 @@ public  class StaffSoundCommand implements CommandExecutor {
         return true;
     }
 
-} class StaffSoundListener implements Listener{
+} 
+class StaffSoundListener implements Listener {
 
     //TODO Fix this stuuff lmaoo
 
@@ -65,8 +62,8 @@ public  class StaffSoundCommand implements CommandExecutor {
         //p.openInventory(gui);
     }
 
-    private Inventory guiswitch = Bukkit.createInventory(null, 9, (ChatColor.DARK_RED + "StaffSound Switch"));
-    private Inventory guisettings = Bukkit.createInventory(null, 27, (ChatColor.DARK_RED + "StaffSound Sounds"));
+    private Inventory guiswitch = Bukkit.createInventory(null, 9, (ChatColor.DARK_RED + "Staff Sound Switch"));
+    private Inventory guisettings = Bukkit.createInventory(null, 27, (ChatColor.DARK_RED + "Staff Sound Sounds"));
 
 
     @EventHandler
