@@ -16,5 +16,7 @@ public class Listeners implements Listener {
         if (p.hasPermission("staffsound.join"))
             
         p.playSound(p.getLocation(), Sound.WITHER_DEATH, 1, 1);
+        
+        //Plan to add alternate sounds to make the customization a little bit better. - Zayd.
     }
 }
